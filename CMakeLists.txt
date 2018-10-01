@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(test)
+project(nodelet_with_opencv_test)
 
 find_package(catkin REQUIRED COMPONENTS
   nodelet roscpp sensor_msgs cv_bridge

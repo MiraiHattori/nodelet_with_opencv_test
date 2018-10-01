@@ -1,6 +1,6 @@
 
 <library path="lib/libmain2">
-  <class name="test/main2" type="test::TestNodelet" base_class_type="nodelet::Nodelet">
+  <class name="nodelet_with_opencv_test/main2" type="nodelet_with_opencv_test::TestNodelet" base_class_type="nodelet::Nodelet">
     <description>This is the nodelet for testing.</description>
   </class>
 </library>

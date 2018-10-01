@@ -7,7 +7,7 @@
 #include <ros/ros.h>
 #include <vector>
 
-namespace test {
+namespace nodelet_with_opencv_test {
 class TestNodelet : public nodelet::Nodelet {
 public:
   explicit TestNodelet() = default;
@@ -34,5 +34,5 @@ public:
     std::cerr << "TestNodelet::onInit() done. Success." << std::endl;
   }
 };
-PLUGINLIB_EXPORT_CLASS(test::TestNodelet, nodelet::Nodelet)
+PLUGINLIB_EXPORT_CLASS(nodelet_with_opencv_test::TestNodelet, nodelet::Nodelet)
 }
