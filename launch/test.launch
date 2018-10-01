@@ -1,19 +1,19 @@
 <launch>
     <arg name="standalone" default="true" />
-    <arg name="with_jsk_recognition" default="true" />
+    <arg name="with_jsk_perception" default="true" />
 
     <group if="$(arg standalone)">
         <node name="test_nodelet" pkg="nodelet" type="nodelet"
             args="standalone nodelet_with_opencv_test/main2" />
-        <group if="$(arg with_jsk_recognition)">
-            <node name="erode" pkg="nodelet" type="nodelet"
-                args="load jsk_perception/ErodeMaskImage test_manager" />
-        </group>
     </group>
 
     <group unless="$(arg standalone)">
         <node name="test_manager" pkg="nodelet" type="nodelet"
             args="manager" />
+        <group if="$(arg with_jsk_perception)">
+            <node name="erode" pkg="nodelet" type="nodelet"
+                args="load jsk_perception/ErodeMaskImage test_manager" />
+        </group>
         <node name="test_nodelet" pkg="nodelet" type="nodelet"
             args="load nodelet_with_opencv_test/main2 test_manager" />
     </group>
