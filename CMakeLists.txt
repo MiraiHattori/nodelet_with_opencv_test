@@ -9,7 +9,7 @@ catkin_package(CATKIN_DEPENDS
 )
 
 set(CMAKE_CXX_FLAGS "-std=c++11 -O2 ${CMAKE_CXX_FLAGS}")
-find_package(OpenCV 3)
+find_package(OpenCV)
 message("${OpenCV_INCLUDE_DIRS}")
 message("${OpenCV_LIBRARIES}")
 
