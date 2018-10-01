@@ -2,12 +2,12 @@
 
 # how to run a test
 ```
-$ rosrun nodelet\_with\_opencv\_test main
+$ rosrun nodelet_with_opencv_test main
 ```
 
 # how to launch a nodelet test
 ```
-$ roslaunch nodelet\_with\_opencv\_test test.launch standalone:=true
-$ roslaunch nodelet\_with\_opencv\_test test.launch standalone:=false with\_jsk\_perception:=true
-$ roslaunch nodelet\_with\_opencv\_test test.launch standalone:=false with\_jsk\_perception:=false
+$ roslaunch nodelet_with_opencv_test test.launch standalone:=true
+$ roslaunch nodelet_with_opencv_test test.launch standalone:=false with_jsk_perception:=true
+$ roslaunch nodelet_with_opencv_test test.launch standalone:=false with_jsk_perception:=false
 ```
