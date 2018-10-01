@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>test</name>
+  <version>0.0.0</version>
+  <description>test.</description>
+
+  <maintainer email="a@a.com">future731</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://sample.com</url>
+
+  <author>Mirai Hattori</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>nodelet</depend>
+  <depend>cv_bridge</depend>
+  <depend>sensor_msgs</depend>
+
+  <!-- Dependencies of libflycapture -->
+  <exec_depend>image_proc</exec_depend>
+  <exec_depend>stereo_image_proc</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+  <test_depend>roslint</test_depend>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+</package>

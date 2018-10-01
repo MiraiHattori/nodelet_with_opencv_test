@@ -1,0 +1,21 @@
+<launch>
+    <arg name="standalone" default="true" />
+    <arg name="with_jsk_recognition" default="true" />
+
+    <group if="$(arg standalone)">
+        <node name="test_nodelet" pkg="nodelet" type="nodelet"
+            args="standalone test/main2" />
+        <group if="$(arg with_jsk_recognition)">
+            <node name="erode" pkg="nodelet" type="nodelet"
+                args="load jsk_perception/ErodeMaskImage test_manager" />
+        </group>
+    </group>
+
+    <group unless="$(arg standalone)">
+        <node name="test_manager" pkg="nodelet" type="nodelet"
+            args="manager" />
+        <node name="test_nodelet" pkg="nodelet" type="nodelet"
+            args="load test/main2 test_manager" />
+    </group>
+
+</launch>
